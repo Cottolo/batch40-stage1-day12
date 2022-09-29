@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Home</title>
+    <link rel="shortcut icon" href="/public/images/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="/public/css/edite-project.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg shadow ">
+        <div class="container-lg">
+            <a class="navbar-brand logo " href="/home">
+                <img class=" my-0 h-100 " src="/public/images/logo.png" alt="logo" width="35" height="30">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link home active" aria-current="page" href="/home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold" href="/project">Add Project</a>
+                    </li>
+                </ul>
+
+                <a class="btn bg-dark text-light py-1 px-4" href="/contact">Contact Me</a>
+
+            </div>
+        </div>
+    </nav>
+
+    <div class="badan py-5 h-100 bg-light">
+
+        <h2>ADD MY PROJECT</h2>
+
+        <form class="" onsubmit="" action="/edite-project/{{.EditeId}}" method="POST">
+            <div>
+                <label for="project-name">Project Name</label>
+                <input type="text" id="project-name" name="project-name" >
+            </div>
+            <div class="date">
+                <div class="start-date">
+                    <label for="start-date">Start Date</label>
+                    <input type="date" id="start-date" name="start-date">
+                </div>
+                <div class="end-date">
+                    <label for="end-date">End Date</label>
+                    <input type="date" id="end-date" name="end-date">
+                </div>
+            </div>
+            <div>
+                <label for="Description">Description</label>
+                <textarea class="description" name="project-description" id="description" cols="20" rows="10"></textarea>
+            </div>
+            <p style="font-size:20px ; 
+            font-weight: bold;
+            ">Techlogies</p>
+            <div class="technologies">
+                <div>
+                    <div>
+                        <input value="fa-brands fa-node-js" type="checkbox" id="node-js" name="node-js">
+                        <label for="node-js">Node JS</label>
+                    </div>
+                    <div>
+                        <input value="fa-brands fa-facebook" type="checkbox" id="next-js" name="next-js">
+                        <label for="next-js">Next JS</label>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <input value="fa-brands fa-react" type="checkbox" id="react-js" name="react-js">
+                        <label for="react-js">React JS</label>
+                    </div>
+                    <div>
+                        <input value="fa-brands fa-github" type="checkbox" id="typeScript" name="typescript">
+                        <label for="typeScript">TypeScript</label>
+                    </div>
+                </div>
+
+            </div>
+
+            <div>
+                <label for="">Upload Image</label>
+                <div class="upload-image">
+                    <label for="input-image">
+                        <p>choose</p>
+                        <img src="/public/images/file.png" alt="">
+                    </label>
+                    <input type="file" hidden id="input-image">
+                </div>
+            </div>
+            <div class="submit">
+                <button>Submit</button>
+            </div>
+        </form>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

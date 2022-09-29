@@ -1,0 +1,16 @@
+nav{
+    background-color: rgb(157, 157, 177);
+
+}
+
+.card-text{
+    text-align: justify;
+}
+
+.section-left{
+    width: 65%;
+}
+
+.section-right{
+    width: 30%;
+}

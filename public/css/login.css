@@ -1,0 +1,11 @@
+nav{
+    background-color: rgb(157, 157, 177);
+}
+
+label{
+    font-size: 20px;
+}
+.badan{
+    height: 94vh ;
+    /* background-color: aquamarine !important; */
+}
